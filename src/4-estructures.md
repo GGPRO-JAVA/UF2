@@ -557,3 +557,10 @@ En el següent exemple es pot veure l'ús dels diferents elements auxiliars desc
 > - Aquest exemple demostra com es pot utilitzar un comptador per portar un registre del nombre de vegades que s'ha complit la condició desitjada, d'aquesta manera podrà calcular la mitjana de notes.
 > - A més, compta amb un acumulador que anirà sumant les notes de l'alumne concret.
 > - Finalment, la variable seguir funcionarà com a interruptor per parar d'introduir notes i continuar amb el programa.
+
+::: tip Conceptes clau per recordar
+- Les **estructures de control** permeten modificar el flux d'execució d'un algorisme.
+- Les **estructures alternatives** permeten prendre decisions dins del programa i executar diferents accions basades en l'estat del sistema o les dades d'entrada.
+- Les **estructures repetitives** permeten repetir un bloc d'instruccions múltiples vegades fins que es complisca una condició determinada.
+- Els **elements auxiliars** com comptadors, acumuladors i interruptors faciliten el seguiment i control de l'estat dins dels bucles.
+:::

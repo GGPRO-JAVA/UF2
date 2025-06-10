@@ -238,3 +238,11 @@ Aquests exemples mostren com es maneja l'entrada i eixida de dades per a permetr
 >
 >:::
 > Aquest exemple demostra com es poden utilitzar instruccions d'entrada per a obtindre dades de l'usuari i d'eixida per a mostrar el resultat del càlcul.
+
+::: tip Conceptes clau per recordar
+- **Inici i fi**: Marquen els límits d'un algorisme.
+- **Processament**: Assignació de valors i càlculs.
+- **Entrada i eixida**: Interacció amb l'usuari mitjançant dispositius d'entrada i eixida.
+- **Dispositius d'entrada i eixida**: Teclat, ratolí, pantalla, impressora.
+- **Paral·lelograms**: S'utilitzen per a representar operacions d'entrada i eixida en diagrames de flux.
+:::

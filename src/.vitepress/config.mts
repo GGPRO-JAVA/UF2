@@ -33,24 +33,28 @@ export default withMermaid({
       { text: '🏠 Inici', link: '/' },
       { text: '📋 Objectius', link: '/objectius' },
       { text: '📚 Continguts', items: [
-        { text: '1. Introducció', link: '/1-introduccio' },
+        { text: '1. Introducció', link: '/1-introduccio' },        
         { text: '2. Tipus de representació d\'algoritmes', link: '/2-representacio' },
         { text: '3. Instruccions bàsiques', link: '/3-instruccions' },
         { text: '4. Estructures de control', link: '/4-estructures' },
-        { text: 'Exemples', link: '/5-exemples' },
-        { text: 'Exercicis', link: '/6-enunciats' },
+        { text: '5. Casos d\'estudi i patrons comuns', link: '/5-casos-estudi' },
+        { text: '6. Eines digitals per a diagrames de flux', link: '/6-eines-digitals' },
+        { text: '7. Exercicis', link: '/7-enunciats' },
+        { text: '8. Exemples', link: '/8-exemples' },
       ]}
     ],
     sidebar: [
       {
         text: '📚 Continguts',
         items: [
-          { text: '1. Introducció', link: '/1-introduccio' },
+          { text: '1. Introducció', link: '/1-introduccio' },          
           { text: '2. Tipus de representació d\'algoritmes', link: '/2-representacio' },
           { text: '3. Instruccions bàsiques', link: '/3-instruccions' },
           { text: '4. Estructures de control', link: '/4-estructures' },
-          { text: '💡 Exemples', link: '/5-exemples' },
-          { text: '✏️ Exercicis', link: '/6-enunciats' },
+          { text: '5. Casos d\'estudi i patrons comuns', link: '/5-casos-estudi' },
+          { text: '6. Eines digitals per a diagrames de flux', link: '/6-eines-digitals' },
+          { text: '7. Exercicis', link: '/7-enunciats' },
+          { text: '8. Exemples', link: '/8-exemples' },
           { text: '<img src="img/logo-gva.png" class="logo-anim" style="vertical-align:middle; height:150px; margin-top:100px;">', link: '' },
           { text: '<img src="img/logo-centro.png" class="logo-anim" style="vertical-align:middle; height:150px;">', link: '' }
         ]
