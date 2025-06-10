@@ -84,7 +84,7 @@ Per a programadors avançats que volen generar diagrames automàticament.
 
 > ***Exemple de codi Mermaid:***
 >
-> ```mermaid
+> ```plaintext
 > graph TD
 >     A[Inici] --> B{Edat >= 18?}
 >     B -->|Sí| C[Mostrar: Ets major d'edat]
