@@ -39,7 +39,7 @@ Fi
 
 ### Exemple 3-2
 
-**Enunciat**: Desenvolupeu un algorisme que permeta determinar l’àrea i el volum d’un cilindre donat el seu radi (R) i altura (H).
+**Enunciat**: Desenvolupeu un algorisme que permeta determinar l'àrea i el volum d'un cilindre donat el seu radi (R) i altura (H).
 
 ::: tabs
 == Pseudocodi
@@ -287,7 +287,7 @@ graph TD;
 
 ### Exemple 4-2-3
 
-**Enunciat**: Desenvolupeu un algorisme que permeta llegir dos valors diferents, determinar quin dels dos valors és el major i escriure’l.
+**Enunciat**: Desenvolupeu un algorisme que permeta llegir dos valors diferents, determinar quin dels dos valors és el major i escriure'l.
 
 ::: tabs
 == Pseudocodi
