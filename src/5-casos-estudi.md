@@ -15,21 +15,40 @@ Aquest és el patró més bàsic i es troba en gairebé tots els algoritmes.
 
 > ***Exemple: Calculadora de superfície***
 >
-> ```plaintext
-> INICI
->   // ENTRADA
->   ESCRIURE "Introduïu la base:"
->   LLEGIR base
->   ESCRIURE "Introduïu l'altura:"
->   LLEGIR altura
->   
->   // PROCESSAMENT
->   superfície ← base * altura
->   
->   // SORTIDA
->   ESCRIURE "La superfície és: " + superfície
-> FI
-> ```
+>::: tabs
+>== Pseudocodi
+>```plaintext
+>INICI
+>  // ENTRADA
+>  ESCRIURE "Introduïu la base:"
+>  LLEGIR base
+>  ESCRIURE "Introduïu l'altura:"
+>  LLEGIR altura
+>  
+>  // PROCESSAMENT
+>  superfície ← base * altura
+>  
+>  // SORTIDA
+>  ESCRIURE "La superfície és: " + superfície
+>FI
+>```
+>== Diagrama de flux
+>```mermaid
+>graph TD;
+>    A((Inici)) --> B[/Escriure "Introduïu la base:"/]:::romboide;
+>    B --> C[/Llegir base/]:::romboide;
+>    C --> D[/Escriure "Introduïu l'altura:"/]:::romboide;
+>    D --> E[/Llegir altura/]:::romboide;
+>    E --> F[superficie = base * altura]:::rectangle;
+>    F --> G[/Escriure "La superfície és:", superficie/]:::romboide;
+>    G --> H((Fi)):::inici_fi;
+>
+>    classDef romboide fill:#188CC4, color:white;
+>    classDef rombe fill:#A08DB1, color:white;
+>    classDef rectangle fill:#43BA43, color:white;
+>    classDef inici_fi fill:#ccc, color:#000;
+>``` 
+>:::
 
 #### **Aplicacions del patró:**
 - Calculadores
@@ -49,51 +68,113 @@ Assegura que les dades introduïdes per l'usuari siguen vàlides abans de proces
 
 > ***Exemple: Validar edat***
 >
-> ```plaintext
-> INICI
->   REPETIR
->     ESCRIURE "Introduïu la vostra edat (0-120):"
->     LLEGIR edat
->     SI edat < 0 O edat > 120 LLAVORS
->       ESCRIURE "Error: L'edat ha d'estar entre 0 i 120"
->     FI SI
->   MENTRE edat < 0 O edat > 120
->   
->   ESCRIURE "Edat vàlida: " + edat
-> FI
-> ```
+>::: tabs
+>== Pseudocodi
+>```plaintext
+>Inici
+>    Repetir
+>        Escriure "Introduïu la vostra edat (0-120):"
+>        Llegir edat
+>        Si edat < 0 O edat > 120 Llavors
+>            Escriure "Error: L'edat ha d'estar entre 0 i 120"
+>        Fi_Si
+>    Mentre edat < 0 O edat > 120
+>    
+>    Escriure "Edat vàlida:", edat
+>Fi
+>```
+>== Diagrama de flux
+>```mermaid
+>graph TD;
+>    A((Inici)) --> B[/Escriure 'Introduïu edat 0-120'/]:::romboide;
+>    B --> C[/Llegir edat/]:::romboide;
+>    C --> D{edat < 0 O edat > 120?}:::rombe;
+>    D -->|Sí| E[/Escriure 'Error: edat entre 0 i 120'/]:::romboide;
+>    D -->|No| F{edat < 0 O edat > 120?}:::rombe;
+>    E --> F;
+>    F -->|Sí| B;
+>    F -->|No| G[/Escriure 'Edat vàlida:', edat/]:::romboide;
+>    G --> H((Fi)):::inici_fi;
+>
+>    classDef romboide fill:#188CC4, color:white;
+>    classDef rombe fill:#A08DB1, color:white;
+>    classDef rectangle fill:#43BA43, color:white;
+>    classDef inici_fi fill:#ccc, color:#000;
+>```
 
 ### 5.1.3 Patró de cerca
 
 Buscar un element específic dins d'un conjunt de dades.
 
 #### **Cerca seqüencial:**
-```plaintext
-INICI
-  trobat ← FALS
-  posició ← 0
-  MENTRE posició < tamany_llista I NO trobat
-    SI llista[posició] = element_buscat LLAVORS
-      trobat ← CERT
-    SINÓ
-      posició ← posició + 1
-    FI SI
-  FI MENTRE
-  
-  SI trobat LLAVORS
-    ESCRIURE "Element trobat a la posició: " + posició
-  SINÓ
-    ESCRIURE "Element no trobat"
-  FI SI
-FI
-```
+Es busca element per element fins a trobar-lo o esgotar la llista.
+
+Estructura general:
+1. Inicialitzar una variable per controlar si s'ha trobat l'element
+2. Iterar sobre cada element de la llista
+3. Si l'element coincideix amb el buscat, marcar com trobat
+4. Si s'ha trobat, mostrar la posició; si no, indicar que no s'ha trobat
+
+> ***Exemple: Cerca d'un element en una llista***
+>::: tabs
+>== Pseudocodi
+>```plaintext
+>INICI
+>  trobat ← FALS
+>  posició ← 0
+>  MENTRE posició < tamany_llista I NO trobat
+>    SI element de la llista en posició = element_buscat LLAVORS
+>      trobat ← CERT
+>    SINÓ
+>      posició ← posició + 1
+>    FI SI
+>  FI MENTRE
+>  
+>  SI trobat LLAVORS
+>    ESCRIURE "Element trobat a la posició: " + posició
+>  SINÓ
+>    ESCRIURE "Element no trobat"
+>  FI SI
+>FI
+>```
+>== Diagrama de flux
+>```mermaid
+>graph TD;
+>    A((Inici)) --> B[/Inicialitzar trobat a FALS, posició a 0/]:::romboide;
+>    B --> C{posició < tamany_llista I NO trobat?}
+>    C -->|Sí| D[/Si element de la llista en posició = element_buscat/]:::rombe;
+>    D -->|Sí| E[/trobat ← CERT/]:::romboide;
+>    D -->|No| F[/posició ← posició + 1/]:::romboide;
+>    C -->|No| G{trobat?}:::rombe;
+>    E --> G;
+>    F --> C;
+>    G -->|Sí| H[/Escriure 'Element trobat a la posició:', posició/]:::romboide;
+>    G -->|No| I[/Escriure 'Element no trobat'/]
+>    H --> J((Fi)):::inici_fi;
+>    I --> J;
+>    J --> K((Fi)):::inici_fi;
+>
+>    classDef romboide fill:#188CC4, color:white;
+>    classDef rombe fill:#A08DB1, color:white;
+>    classDef rectangle fill:#43BA43, color:white;
+>    classDef inici_fi fill:#ccc, color:#000;
+>```
+>:::
 
 ### 5.1.4 Patró d'acumulació
 
 Utilitzat per calcular sumes, mitjanes, o anar acumulant valors.
 
+Estructura general:
+1. Inicialitzar una variable acumuladora a zero
+2. Iterar sobre una llista d'elements
+3. Per cada element, sumar-lo a l'acumulador
+4. Mostrar el resultat final
+
 > ***Exemple: Calcular mitjana de notes***
 >
+>::: tabs
+>== Pseudocodi
 > ```plaintext
 > INICI
 >   suma ← 0
@@ -116,149 +197,39 @@ Utilitzat per calcular sumes, mitjanes, o anar acumulant valors.
 >   FI SI
 > FI
 > ```
-
-## 5.2 Casos d'estudi per sectors
-
-### 5.2.1 Sector bancari
-
-#### **Cas: Sistema de validació de targeta de crèdit**
-
-**Problema**: Verificar si un número de targeta de crèdit és vàlid utilitzant l'algoritme de Luhn.
-
-**Patrons utilitzats**:
-- Validació d'entrada (número de 16 dígits)
-- Processament per dígits
-- Validació matemàtica
-
-> ***Algoritme simplificat:***
+>== Diagrama de flux
+>```mermaid
+>graph TD;
+>    A((Inici)) --> B[/Inicialitzar suma a 0, comptador a 0/]:::romboide;
+>    B --> C[/Escriure 'Introduïu una nota o -1 per acabar:'/]:::romboide;
+>    C --> D[/Llegir nota/]:::romboide;
+>    D --> E{nota != -1?}:::rombe;
+>    E -->|Sí| F[/suma ← suma + nota/]:::romboide;
+>    F --> G[/comptador ← comptador + 1/]:::romboide;
+>    G --> C;
+>    E -->|No| H{comptador > 0?}:::rombe;
+>    H -->|Sí| I[/mitjana ← suma / comptador/]:::romboide;
+>    I --> J[/Escriure 'La mitjana és:', mitjana/]:::romboide;
+>    H -->|No| K[/Escriure 'No s\'han introduït notes'/]:::romboide;
+>    J --> L((Fi)):::inici_fi;
+>    K --> L;
+>    L --> M((Fi)):::inici_fi;
 >
-> ```plaintext
-> INICI
->   ESCRIURE "Introduïu el número de targeta (16 dígits):"
->   LLEGIR numeroTargeta
->   
->   // Validar longitud
->   SI longitud(numeroTargeta) != 16 LLAVORS
->     ESCRIURE "Error: Ha de tenir 16 dígits"
->   SINÓ
->     // Aplicar algoritme de Luhn (simplificat)
->     suma ← 0
->     PER A i DE 1 A 16
->       dígit ← numeroTargeta[i]
->       SI i és parell LLAVORS
->         dígit ← dígit * 2
->         SI dígit > 9 LLAVORS
->           dígit ← dígit - 9
->         FI SI
->       FI SI
->       suma ← suma + dígit
->     FI PER A
->     
->     SI suma % 10 = 0 LLAVORS
->       ESCRIURE "Targeta vàlida"
->     SINÓ
->       ESCRIURE "Targeta no vàlida"
->     FI SI
->   FI SI
-> FI
-> ```
+>    classDef romboide fill:#188CC4, color:white;
+>    classDef rombe fill:#A08DB1, color:white;
+>    classDef rectangle fill:#43BA43, color:white;
+>    classDef inici_fi fill:#ccc, color:#000;
+>```
+>:::
 
-### 5.2.2 Sector educatiu
+## 5.2 Optimització de patrons comuns
 
-#### **Cas: Sistema de qualificacions**
-
-**Problema**: Calcular la nota final d'un estudiant amb diferents pesos per a cada avaluació.
-
-**Patrons utilitzats**:
-- Entrada múltiple de dades
-- Càlcul ponderat
-- Classificació per rangs
-
-> ***Algoritme:***
->
-> ```plaintext
-> INICI
->   ESCRIURE "Introduïu la nota dels exàmens (40%):"
->   LLEGIR notaExamens
->   ESCRIURE "Introduïu la nota de pràctiques (35%):"
->   LLEGIR notaPractiques
->   ESCRIURE "Introduïu la nota de participació (25%):"
->   LLEGIR notaParticipacio
->   
->   // Calcular nota final ponderada
->   notaFinal ← (notaExamens * 0.4) + (notaPractiques * 0.35) + (notaParticipacio * 0.25)
->   
->   // Determinar qualificació
->   SI notaFinal >= 9 LLAVORS
->     qualificació ← "Excel·lent"
->   SINÓ SI notaFinal >= 7 LLAVORS
->     qualificació ← "Notable"
->   SINÓ SI notaFinal >= 5 LLAVORS
->     qualificació ← "Aprovat"
->   SINÓ
->     qualificació ← "Suspès"
->   FI SI
->   
->   ESCRIURE "Nota final: " + notaFinal + " (" + qualificació + ")"
-> FI
-> ```
-
-### 5.2.3 Sector comerç electrònic
-
-#### **Cas: Calculadora de descomptes**
-
-**Problema**: Aplicar diferents tipus de descomptes segons el perfil del client i l'import de la compra.
-
-**Patrons utilitzats**:
-- Decisions múltiples
-- Càlculs condicionals
-- Validació de regles de negoci
-
-> ***Algoritme:***
->
-> ```plaintext
-> INICI
->   ESCRIURE "Introduïu l'import de la compra:"
->   LLEGIR importCompra
->   ESCRIURE "Tipus de client (VIP/REGULAR/NOU):"
->   LLEGIR tipusClient
->   
->   descompte ← 0
->   
->   // Aplicar descompte per tipus de client
->   SI tipusClient = "VIP" LLAVORS
->     descompte ← 0.15  // 15%
->   SINÓ SI tipusClient = "REGULAR" LLAVORS
->     descompte ← 0.10  // 10%
->   SINÓ SI tipusClient = "NOU" LLAVORS
->     descompte ← 0.05  // 5%
->   FI SI
->   
->   // Descompte addicional per import alt
->   SI importCompra > 200 LLAVORS
->     descompte ← descompte + 0.05  // 5% extra
->   FI SI
->   
->   // Limitar descompte màxim
->   SI descompte > 0.25 LLAVORS
->     descompte ← 0.25  // Màxim 25%
->   FI SI
->   
->   importDescompte ← importCompra * descompte
->   importFinal ← importCompra - importDescompte
->   
->   ESCRIURE "Import original: " + importCompra + "€"
->   ESCRIURE "Descompte aplicat: " + (descompte * 100) + "%"
->   ESCRIURE "Import del descompte: " + importDescompte + "€"
->   ESCRIURE "Import final: " + importFinal + "€"
-> FI
-> ```
-
-## 5.3 Optimització de patrons comuns
-
-### 5.3.1 Principis d'optimització
+### 5.2.1 Principis d'optimització
 
 #### **Evitar càlculs redundants**
+
+::: tabs
+== Pseudocodi
 ```plaintext
 // Dolent: Calcular el mateix valor múltiples vegades
 SI (a + b) > 10 I (a + b) < 20 LLAVORS
@@ -271,8 +242,27 @@ SI suma > 10 I suma < 20 LLAVORS
   resultat ← suma * 2
 FI SI
 ```
+== Diagrama de flux
+```mermaid
+graph TD;
+    A((Inici)) --> B[/Llegir a, b/]:::romboide;
+    B --> C[/suma ← a + b/]:::romboide;
+    C --> D{Suma > 10 I Suma < 20?}:::rombe;
+    D -->|Sí| E[/resultat ← suma * 2/]:::romboide;
+    D -->|No| F[/No fer res/]:::romboide;
+    E --> G((Fi)):::inici_fi;
+    F --> G;
+    
+    classDef romboide fill:#188CC4, color:white;
+    classDef rombe fill:#A08DB1, color:white;
+    classDef rectangle fill:#43BA43, color:white;
+    classDef inici_fi fill:#ccc, color:#000;
+```
+:::
 
 #### **Usar condicions eficients**
+::: tabs
+== Pseudocodi
 ```plaintext
 // Dolent: Comprovar condicions costoses primer
 SI operació_costosa() I variable_simple = 5 LLAVORS
@@ -284,78 +274,127 @@ SI variable_simple = 5 I operació_costosa() LLAVORS
   // codi
 FI SI
 ```
+== Diagrama de flux
+```mermaid
+graph TD;
+    A((Inici)) --> B[/Llegir variable_simple/]:::romboide;
+    B --> C{variable_simple = 5?}:::rombe;
+    C -->|Sí| D[/Operació costosa/]:::romboide;
+    C -->|No| E[/No fer res/]:::romboide;
+    D --> F[/Codi a executar/]:::romboide;
+    E --> G((Fi)):::inici_fi;
+    F --> G;
 
-### 5.3.2 Refactorització de patrons
+    classDef romboide fill:#188CC4, color:white;
+    classDef rombe fill:#A08DB1, color:white;
+    classDef rectangle fill:#43BA43, color:white;
+    classDef inici_fi fill:#ccc, color:#000;
+```
+:::
+
+### 5.2.2 Refactorització de patrons
 
 #### **Abans de refactoritzar:**
+::: tabs
+== Pseudocodi
 ```plaintext
 INICI
-  ESCRIURE "Nom:"
-  LLEGIR nom
-  SI nom = "" LLAVORS
-    ESCRIURE "Error: Nom buit"
-    PARAR
+  ESCRIURE "Introduïu el primer número:"
+  LLEGIR num1
+  SI num1 < 0 LLAVORS
+    ESCRIURE "El primer número és negatiu"
   FI SI
   
-  ESCRIURE "Edat:"
-  LLEGIR edat
-  SI edat < 0 O edat > 120 LLAVORS
-    ESCRIURE "Error: Edat no vàlida"
-    PARAR
+  ESCRIURE "Introduïu el segon número:"
+  LLEGIR num2
+  SI num2 < 0 LLAVORS
+    ESCRIURE "El segon número és negatiu"
   FI SI
   
-  ESCRIURE "Email:"
-  LLEGIR email
-  SI email no conté "@" LLAVORS
-    ESCRIURE "Error: Email no vàlid"
-    PARAR
+  ESCRIURE "Introduïu el tercer número:"
+  LLEGIR num3
+  SI num3 < 0 LLAVORS
+    ESCRIURE "El tercer número és negatiu"
   FI SI
+  
+  suma = num1 + num2 + num3
+  ESCRIURE "La suma és:", suma
 FI
 ```
+== Diagrama de flux
+```mermaid
+graph TD;
+    A((Inici)) --> B[/Escriure 'Primer número:'/]:::romboide;
+    B --> C[/Llegir num1/]:::romboide;
+    C --> D{num1 < 0?}:::rombe;
+    D -->|Sí| E[/Escriure 'Primer número negatiu'/]:::romboide;
+    D -->|No| F[/Escriure 'Segon número:'/]:::romboide;
+    E --> F;
+    F --> G[/Llegir num2/]:::romboide;
+    G --> H{num2 < 0?}:::rombe;
+    H -->|Sí| I[/Escriure 'Segon número negatiu'/]:::romboide;
+    H -->|No| J[/Escriure 'Tercer número:'/]:::romboide;
+    I --> J;
+    J --> K[/Llegir num3/]:::romboide;
+    K --> L{num3 < 0?}:::rombe;
+    L -->|Sí| M[/Escriure 'Tercer número negatiu'/]:::romboide;
+    L -->|No| N[suma = num1 + num2 + num3]:::rectangle;
+    M --> N;
+    N --> O[/Escriure 'La suma és:', suma/]:::romboide;
+    O --> P((Fi)):::inici_fi;
+
+    classDef romboide fill:#188CC4, color:white;
+    classDef rombe fill:#A08DB1, color:white;
+    classDef rectangle fill:#43BA43, color:white;
+    classDef inici_fi fill:#ccc, color:#000;
+```
+:::
 
 #### **Després de refactoritzar:**
+::: tabs
+== Pseudocodi
 ```plaintext
 INICI
-  // Usar una funció de validació
-  datosVàlids ← validarDatos()
-  SI datosVàlids LLAVORS
-    processarDatos()
-  SINÓ
-    ESCRIURE "Dades no vàlides, torneu a intentar-ho"
-  FI SI
-FI
-
-FUNCIÓ validarDatos()
-  // Lògica de validació concentrada
-  RETORNAR nom != "" I edat >= 0 I edat <= 120 I email conté "@"
-FI FUNCIÓ
+  suma = 0
+  comptador = 1
+  
+  Mentre comptador <= 3 Fer
+    Escriure "Introduïu el número", comptador, ":"
+    Llegir numero
+    
+    Si numero < 0 Llavors
+      Escriure "El número", comptador, "és negatiu"
+    Fi_Si
+    
+    suma = suma + numero
+    comptador = comptador + 1
+  Fi_Mentre
+  
+  Escriure "La suma és:", suma
+Fi
 ```
+== Diagrama de flux
+```mermaid
+graph TD;
+    A((Inici)) --> B[suma = 0, comptador = 1]:::rectangle;
+    B --> C{comptador <= 3?}:::rombe;
+    C -->|Sí| D[/Escriure 'Número', comptador, ':'/]:::romboide;
+    C -->|No| E[/Escriure 'La suma és:', suma/]:::romboide;
+    D --> F[/Llegir numero/]:::romboide;
+    F --> G{numero < 0?}:::rombe;
+    G -->|Sí| H[/Escriure 'Número negatiu'/]:::romboide;
+    G -->|No| I[suma = suma + numero]:::rectangle;
+    H --> I;
+    I --> J[comptador = comptador + 1]:::rectangle;
+    J --> C;
+    E --> K((Fi)):::inici_fi;
 
-## 5.4 Exercicis d'aplicació de patrons
-
-### Exercici 1: Sistema de gestió de biblioteca
-Crear un algoritme que permeti:
-- Registrar un llibre nou (validant ISBN)
-- Buscar un llibre per títol
-- Calcular multes per retard en devolució
-
-**Patrons a aplicar**: Validació, cerca, càlculs condicionals
-
-### Exercici 2: Calculadora d'IMC amb recomanacions
-Crear un algoritme que:
-- Calcule l'Índex de Massa Corporal
-- Classifique el resultat (infrapes, normal, sobrepes, obesitat)
-- Done recomanacions personalitzades
-
-**Patrons a aplicar**: Entrada-processament-sortida, classificació per rangs
-
-### Exercici 3: Sistema de votació
-Crear un algoritme que:
-- Recopile vots de múltiples usuaris
-- Valide que cada persona només vote una vegada
-- Determine el guanyador
-
-**Patrons a aplicar**: Acumulació, validació, processament de llistes
+    classDef romboide fill:#188CC4, color:white;
+    classDef rombe fill:#A08DB1, color:white;
+    classDef rectangle fill:#43BA43, color:white;
+    classDef inici_fi fill:#ccc, color:#000;
+```
+:::
 
 ::: tip Conceptes clau per recordar
 - Els **patrons comuns** apareixen repetidament en diferents problemes
