@@ -131,3 +131,35 @@ Tarifes:
 Trucada local: 0,10 euros per minut.
 Trucada nacional: 0,15 euros per minut.
 Trucada internacional: 0,50 euros per minut.
+
+# Exercicis d'aplicació de patrons
+
+## Exercici 21
+
+Crear un algoritme pera un sistema de gestió de biblioteca que permeti:
+
+- Registrar un llibre nou (validant ISBN)
+- Buscar un llibre per títol
+- Calcular multes per retard en devolució
+
+**Patrons a aplicar**: Validació, cerca, càlculs condicionals
+
+## Exercici 22
+
+Crear un algoritme per a una calculadora d'IMC amb recomanacions que:
+
+- Calcule l'Índex de Massa Corporal
+- Classifique el resultat (infrapes, normal, sobrepes, obesitat)
+- Done recomanacions personalitzades
+
+**Patrons a aplicar**: Entrada-processament-sortida, classificació per rangs
+
+## Exercici 23
+
+Crear un algoritme per a un sistema de votació que:
+
+- Recopile vots de múltiples usuaris
+- Valide que cada persona només vote una vegada
+- Determine el guanyador
+
+**Patrons a aplicar**: Acumulació, validació, processament de llistes

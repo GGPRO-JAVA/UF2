@@ -2,7 +2,7 @@
 
 Fins ara, hem treballat amb algoritmes on les instruccions s'executen de manera seqüencial, és a dir, una darrere l'altra en un ordre específic. No obstant això, en molts casos, és necessari que el flux del programa puga canviar depenent de certes condicions. Per a gestionar aquest tipus de control, s'utilitzen les **estructures de control**.
 
-Les estructures de control permeten modificar el flux d'execució d'un algorisme. Existeixen dos tipus principals d'estructures de control:
+Les estructures de control permeten modificar el flux d'execució d'un algoritme. Existeixen dos tipus principals d'estructures de control:
 
 1. **Estructures Alternatives**: Permeten seleccionar diferents conjunts d'instruccions basades en una condició. Aquestes poden ser simples, dobles o múltiples.
 2. **Estructures Repetitives**: Permeten executar instruccions repetidament. (Aquest tema es cobrirà en la pròxima unitat).
@@ -11,7 +11,7 @@ En aquesta unitat, ens enfocarem en les estructures alternatives.
 
 ## 4.1 Estructures Alternatives
 
-Les estructures alternatives permeten que l'algorisme trie entre diferents camins d'execució depenent de si es compleix una condició determinada. Això és útil per a prendre decisions dins del programa i realitzar diferents accions basades en l'estat del sistema o les dades d'entrada.
+Les estructures alternatives permeten que l'algoritme trie entre diferents camins d'execució depenent de si es compleix una condició determinada. Això és útil per a prendre decisions dins del programa i realitzar diferents accions basades en l'estat del sistema o les dades d'entrada.
 
 ### 4.1.1 Estructura Alternativa Simple
 
@@ -289,7 +289,7 @@ FI MENTRE
 
 > ***Exemple: compte enrere***
 >
-> Suposem que volem comptar cap avall des d'un nombre donat fins a arribar a 0. L'algorisme s'executarà mentre el nombre siga major que 0.
+> Suposem que volem comptar cap avall des d'un nombre donat fins a arribar a 0. L'algoritme s'executarà mentre el nombre siga major que 0.
 >
 > - **Dades d'entrada**: Nombre de segons.
 > - **Dada d'eixida**: Seqüència de nombres en compte enrere.
@@ -490,7 +490,7 @@ En el següent exemple es pot veure l'ús dels diferents elements auxiliars desc
 
 > ***Exemple: Introduir dades d'estudiants i calcular la seua mitjana.***
 >
-> Suposem que volem dissenyar un algorisme que permeta a l'usuari introduir les notes d'un estudiant i calcular la mitjana d'aquestes notes fins que l'usuari decidisca acabar.
+> Suposem que volem dissenyar un algoritme que permeta a l'usuari introduir les notes d'un estudiant i calcular la mitjana d'aquestes notes fins que l'usuari decidisca acabar.
 >
 > - **Dades d'entrada**: Notes introduïdes per l'usuari.
 > - **Dada d'eixida**: Mitjana de les notes.
@@ -557,3 +557,10 @@ En el següent exemple es pot veure l'ús dels diferents elements auxiliars desc
 > - Aquest exemple demostra com es pot utilitzar un comptador per portar un registre del nombre de vegades que s'ha complit la condició desitjada, d'aquesta manera podrà calcular la mitjana de notes.
 > - A més, compta amb un acumulador que anirà sumant les notes de l'alumne concret.
 > - Finalment, la variable seguir funcionarà com a interruptor per parar d'introduir notes i continuar amb el programa.
+
+::: tip Conceptes clau per recordar
+- Les **estructures de control** permeten modificar el flux d'execució d'un algoritme.
+- Les **estructures alternatives** permeten prendre decisions dins del programa i executar diferents accions basades en l'estat del sistema o les dades d'entrada.
+- Les **estructures repetitives** permeten repetir un bloc d'instruccions múltiples vegades fins que es complisca una condició determinada.
+- Els **elements auxiliars** com comptadors, acumuladors i interruptors faciliten el seguiment i control de l'estat dins dels bucles.
+:::

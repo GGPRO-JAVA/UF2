@@ -1,6 +1,6 @@
 # 3. Instruccions bàsiques
 
-En el disseny d'algoritmes, les instruccions bàsiques són fonamentals per a estructurar com es processa la informació. Aquestes instruccions defineixen els elements clau que permeten que un algorisme funcione correctament.
+En el disseny d'algoritmes, les instruccions bàsiques són fonamentals per a estructurar com es processa la informació. Aquestes instruccions defineixen els elements clau que permeten que un algoritme funcione correctament.
 
 Com s'ha vist en la UF1, els operadors poden variar depenent del llenguatge de programació. En aquest cas, els operadors que es representen en els diagrames de flux varien un poc respecte als de pseudocodi.
 
@@ -24,10 +24,10 @@ Recorda que els diagrames de flux utilitzen símbols específics com es va veure
 
 ## 3.1 Instruccions d'inici i fi
 
-Cada algorisme ha de tindre un punt d'**inici** i un punt de **fi** per a definir clarament el començament i el final del procés. Aquests punts són essencials per a assegurar que l'algorisme tinga un flux definit i siga fàcil de seguir.
+Cada algoritme ha de tindre un punt d'**inici** i un punt de **fi** per a definir clarament el començament i el final del procés. Aquests punts són essencials per a assegurar que l'algoritme tinga un flux definit i siga fàcil de seguir.
 
-- **INICI**: Marca el punt on l'algorisme comença a executar-se.
-- **FI**: Indica el punt on l'algorisme acaba.
+- **INICI**: Marca el punt on l'algoritme comença a executar-se.
+- **FI**: Indica el punt on l'algoritme acaba.
 
 > ***Exemple: inici i fi***
 >
@@ -53,7 +53,7 @@ Cada algorisme ha de tindre un punt d'**inici** i un punt de **fi** per a defini
 > ```
 >
 >:::
-> Aquest senzill exemple demostra com marcar els límits d'un algorisme, permetent que el flux d'execució siga clar i estructurat.
+> Aquest senzill exemple demostra com marcar els límits d'un algoritme, permetent que el flux d'execució siga clar i estructurat.
 
 ## 3.2 Instruccions de processament d'informació
 
@@ -238,3 +238,11 @@ Aquests exemples mostren com es maneja l'entrada i eixida de dades per a permetr
 >
 >:::
 > Aquest exemple demostra com es poden utilitzar instruccions d'entrada per a obtindre dades de l'usuari i d'eixida per a mostrar el resultat del càlcul.
+
+::: tip Conceptes clau per recordar
+- **Inici i fi**: Marquen els límits d'un algoritme.
+- **Processament**: Assignació de valors i càlculs.
+- **Entrada i eixida**: Interacció amb l'usuari mitjançant dispositius d'entrada i eixida.
+- **Dispositius d'entrada i eixida**: Teclat, ratolí, pantalla, impressora.
+- **Paral·lelograms**: S'utilitzen per a representar operacions d'entrada i eixida en diagrames de flux.
+:::
