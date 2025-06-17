@@ -14,7 +14,7 @@ dist-ssr
 
 # Build output (local only, not committed)
 docs/
-.vitepress/cache/
+src/.vitepress/cache/
 
 # Editor directories and files
 .vscode/*
@@ -26,3 +26,4 @@ docs/
 *.njsproj
 *.sln
 *.sw?
+
