@@ -10,13 +10,13 @@ La empresa Hotel XYZ ha sol·licitat un programa que, al moment d'entrar els hos
 
 ## Execici 2
 
-L'empresa Arquitectura Verde necessita un programa per calcular automàticament l’àrea d’un quadrat amb un costat de longitud fixa, igual a 5 metres. Aquest càlcul s’utilitzarà en el seu programari de disseny per estimar superfícies d’estructures xicotetes. Necessiten que el programa mostre l’àrea en metres quadrats quan s’execute.
+L'empresa Arquitectura Verde necessita un programa per calcular automàticament l'àrea d'un quadrat amb un costat de longitud fixa, igual a 5 metres. Aquest càlcul s'utilitzarà en el seu programari de disseny per estimar superfícies d'estructures xicotetes. Necessiten que el programa mostre l'àrea en metres quadrats quan s'execute.
 
 ---
 
 ## Execici 3
 
-La botiga Ferreteria Global vol un sistema en el qual els empleats puguen introduir la longitud del costat d’un quadrat per calcular la seua àrea. Aquest programa els ajudarà a estimar la quantitat de material necessària per construir plataformes quadrades de diferents mides. El costat serà introduït per teclat, i el programa ha de retornar l’àrea en metres quadrats.
+La botiga Ferreteria Global vol un sistema en el qual els empleats puguen introduir la longitud del costat d'un quadrat per calcular la seua àrea. Aquest programa els ajudarà a estimar la quantitat de material necessària per construir plataformes quadrades de diferents mides. El costat serà introduït per teclat, i el programa ha de retornar l'àrea en metres quadrats.
 
 ---
 
@@ -28,19 +28,19 @@ L'empresa Comptabilitat i Finances S.A. ha sol·licitat un programa que permeti 
 
 ## Execici 5
 
-L'empresa Enginyeria Espacial Orbital necessita un programa que permeti calcular la longitud de la circumferència, l’àrea d’un cercle i el volum d’una esfera, donat el radi que serà introduït pels enginyers. Aquest càlcul s’utilitza per modelar diferents components esfèrics en satèl·lits, per la qual cosa el programa ha de ser el més precís possible.
+L'empresa Enginyeria Espacial Orbital necessita un programa que permeti calcular la longitud de la circumferència, l'àrea d'un cercle i el volum d'una esfera, donat el radi que serà introduït pels enginyers. Aquest càlcul s'utilitza per modelar diferents components esfèrics en satèl·lits, per la qual cosa el programa ha de ser el més precís possible.
 
 ---
 
 ## Execici 6
 
-La botiga Electrònica Modern desitja implementar un sistema que mostre el percentatge de descompte aplicat a un article. Els clients han de veure la diferència entre el preu original i el preu de venda. Aquest sistema es mostrarà en les pantalles del punt de venda quan s’aplique un descompte als productes.
+La botiga Electrònica Modern desitja implementar un sistema que mostre el percentatge de descompte aplicat a un article. Els clients han de veure la diferència entre el preu original i el preu de venda. Aquest sistema es mostrarà en les pantalles del punt de venda quan s'aplique un descompte als productes.
 
 ---
 
 ## Execici 7
 
-L'empresa Navegació Global sol·licita un programa que permeti als seus capitans convertir distàncies en milles marines a metres (una milla marina equival a 1.852 metres). Aquest sistema s’utilitzarà en la navegació d’embarcacions per calcular distàncies en unitats més comprensibles en situacions on es requereixen mesures en metres.
+L'empresa Navegació Global sol·licita un programa que permeti als seus capitans convertir distàncies en milles marines a metres (una milla marina equival a 1.852 metres). Aquest sistema s'utilitzarà en la navegació d'embarcacions per calcular distàncies en unitats més comprensibles en situacions on es requereixen mesures en metres.
 
 ---
 
@@ -76,7 +76,7 @@ L'empresa Anàlisi Matemàtica Pro necessita un programa que calcule el factoria
 
 ## Execici 12
 
-L'empresa Formació Didàctica ha sol·licitat un programa que mostre els primers 20 números naturals. Aquest sistema s’utilitzarà com a part dels seus cursos d'introducció a la programació i matemàtiques, on els estudiants poden observar com es fan servir els bucles per comptar.
+L'empresa Formació Didàctica ha sol·licitat un programa que mostre els primers 20 números naturals. Aquest sistema s'utilitzarà com a part dels seus cursos d'introducció a la programació i matemàtiques, on els estudiants poden observar com es fan servir els bucles per comptar.
 
 ---
 
